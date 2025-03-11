@@ -135,10 +135,128 @@ seqtk subseq assembly/filtered_scaffolds.fasta process/filtered_seqnames_clean.t
 
 
 # Step 3(BLAST time)
-send filtered_sequences.fa(n=30) to BLAST, meanwhile read the paper: https://academic.oup.com/ve/article/3/2/vex030/4629376  #WL
-where we can find 
+send filtered_sequences.fa(n=30) to BLAST
 
-# Step 4(Prokka time)
+https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&VIEW_RESULTS=FromRes&RID=WZP196PB013&UNIQ_OBJ_NAME=A_SearchResults_1trt6n_2V7x_dpoQoVxgFbfB_GTJ71_tApSb&QUERY_INDEX=0
+
+From here I've made a mistake - didn't set restrict for time
+```
+"Entrez Query" field, we'll indicate
+
+1900/01/01:2020/01/01[PDAT]
+```
+make all till the end
+so further notebook divided into two parts: appropriate and inappropriate
+
+here is new blast result( with ("0001/01/01"[PDAT] : "2019/12/01"[PDAT]))
+https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&VIEW_RESULTS=FromRes&RID=X0GD8WM0013&UNIQ_OBJ_NAME=A_SearchResults_1ts08O_44tE_dmaMbXwu6FZ8_GTJ71_23kKoz&QUERY_INDEX=0 
+
+# Appropriate next steps
+## Step 4(Prokka time)
+```Bash
+prokka --kingdom Viruses --outdir prokka_annotation --prefix viral_sample process/filtered_sequences.fa
+```
+
+(GP_balst) mhprs@Seraph:~/PISH/Genomics$ ls prokka_annotation/
+- viral_sample.err 
+- -viral_sample.ffn
+- viral_sample.fsa
+- viral_sample.gff
+- viral_sample.sqn
+- viral_sample.tsv
+- viral_sample.faa
+- viral_sample.fna
+- viral_sample.gbk  
+- viral_sample.log
+- viral_sample.tbl
+- viral_sample.txt
+
+but now extract only one seq that hit the most with respiratory virus 
+```Bash
+seqtk subseq process/filtered_sequences.fa < (echo"NODE_1_length_29907_cov_150.822528") > NODE_1.fasta
+```
+
+	but it turned out that our sequences are inversely directed(because gene `Replicase poliprotein 1a` in our case has position 16420..29637 but in ref seq it is 266..13468)
+	so revert our results
+```Bash
+seqkit seq -r -p NODE_1.fasta > NODE_1_rc.fasta
+prokka --outdir prokka_NODE1_rc --prefix NODE_1 --kingdom Viruses NODE_1_rc.fasta
+```
+
+here we have:
+
+ #IMP Prokka Annotation for NODE_1
+```Bash
+grep "CDS" prokka_NODE1_rc/NODE_1.gff
+```
+
+| Start | End   | Strand | Gene | Product                   | UniProt Reference | Inference                                                                       |
+| ----- | ----- | ------ | ---- | ------------------------- | ----------------- | ------------------------------------------------------------------------------- |
+| 271   | 13488 | +      | 1a   | Replicase polyprotein 1a  | P0C6U8            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P0C6U8 |
+| 13773 | 21560 | +      | rep  | Replicase polyprotein 1ab | P0C6X7            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P0C6X7 |
+| 21568 | 25389 | +      | S    | Spike glycoprotein        | P59594            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P59594 |
+| 25398 | 26225 | +      | 3a   | Protein 3a                | P59632            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P59632 |
+| 26528 | 27196 | +      | M    | Membrane protein          | P59596            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P59596 |
+| 27207 | 27392 | +      | -    | Hypothetical protein      | -                 | ab initio prediction: Prodigal:002006                                           |
+| 27399 | 27764 | +      | 7a   | Protein 7a                | P59635            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P59635 |
+| 27899 | 28264 | +      | -    | Hypothetical protein      | -                 | ab initio prediction: Prodigal:002006                                           |
+| 28279 | 29538 | +      | N    | Nucleoprotein             | P59595            | ab initio prediction: Prodigal:002006, similar to AA sequence: UniProtKB:P59595 |
+
+---
+ **Notes:**
+- **Start / End** — Coordinates of the gene on the contig.
+- **Strand** — Direction (`+` = forward strand, `-` = reverse strand).
+- **Gene** — Gene name (if predicted).
+- **Product** — Protein product.
+- **UniProt Reference** — Link to the analogous protein in UniProt.
+- **Inference** — The method used to predict the gene and its similarity to known sequences (e.g., Prodigal, UniProt references).
+
+so I downloaded gff3 file from gene bank to compare
+> GenBank file by clicking on **Send to** → **File** → **GenBank** → **gff3** format.
+
+```Bash
+grep "CDS" bat_corona.gff3
+```
+
+| Start  | End    | Strand | Gene | Product                     | Protein ID      | Reference                      |
+|--------|--------|--------|------|-----------------------------|-----------------|--------------------------------|
+| 265    | 13455  | +      | -    | Non-structural polyprotein 1ab | AVP78030.1     | NCBI_GP:AVP78030.1             |
+| 13455  | 21542  | +      | -    | Non-structural polyprotein 1ab | AVP78030.1     | NCBI_GP:AVP78030.1             |
+| 21549  | 25289  | +      | -    | Spike protein                | AVP78031.1     | NCBI_GP:AVP78031.1             |
+| 25298  | 26125  | +      | -    | Hypothetical protein         | AVP78032.1     | NCBI_GP:AVP78032.1             |
+| 26150  | 26377  | +      | -    | Envelope protein             | AVP78033.1     | NCBI_GP:AVP78033.1             |
+| 26428  | 27096  | +      | -    | Membrane protein             | AVP78034.1     | NCBI_GP:AVP78034.1             |
+| 27107  | 27292  | +      | -    | Hypothetical protein         | AVP78035.1     | NCBI_GP:AVP78035.1             |
+| 27299  | 27664  | +      | -    | Hypothetical protein         | AVP78036.1     | NCBI_GP:AVP78036.1             |
+| 27799  | 28164  | +      | -    | Hypothetical protein         | AVP78037.1     | NCBI_GP:AVP78037.1             |
+| 28179  | 29438  | +      | -    | Nucleocapsid protein         | AVP78038.1     | NCBI_GP:AVP78038.1             |
+| 28189  | 28482  | +      | -    | Hypothetical protein         | AVP78039.1     | NCBI_GP:AVP78039.1             |
+| 28639  | 28851  | +      | -    | Hypothetical protein         | AVP78040.1     | NCBI_GP:AVP78040.1             |
+
+
+
+here i open it in UGENE
+![[Pasted image 20250311110602.png]]
+and GeneBank ref
+![[Pasted image 20250311110651.png]]
+
+## Step 5(primers)
+
+extract S-gene sequence
+```Bash
+samtools faidx NODE_1_rc.fasta NODE_1_length_29907_cov_150.822528:21568-25389 > gene_S.fasta
+```
+https://www.ncbi.nlm.nih.gov/tools/primer-blast/primertool.cgi?ctg_time=1741684341&job_key=p615UcCgzQjqNsgzxVPsAb9I_TOSW-Yukw
+
+
+extra links 
+https://www.sci-hub.ru/10.1093/ajcp/aqaa029?ysclid=m84ah15miz92885018 #IMP #WL 
+
+https://www.sci-hub.ru/10.1007/978-1-4939-2438-7_1?ysclid=m84aihi3xx589567219 #IMP #WL
+
+# Inappropriate next steps(with SARS-COV2 reference)
+
+## Step 4(Prokka time)
 ```Bash
 prokka --kingdom Viruses --outdir prokka_annotation --prefix viral_sample process/filtered_sequences.fa
 ```
@@ -200,23 +318,38 @@ grep "CDS" prokka_NODE1_rc/NODE_1.gff
 so I downloaded gff3 file from gene bank to compare
 > GenBank file by clicking on **Send to** → **File** → **GenBank** → **gff3** format.
 
-| Start | End   | Strand | Gene   | Product                     | UniProt Reference  | Inference                                                                   |
-| ----- | ----- | ------ | ------ | --------------------------- | ------------------ | --------------------------------------------------------------------------- |
-| 266   | 13483 | +      | 1a     | ORF1a polyprotein           | YP_009725295.1     | pp1a                                                                      |
-| 13468 | 21555 | +      | rep    | ORF1ab polyprotein          | YP_009724389.1     | translated by -1 ribosomal frameshift; ribosomal slippage                   |
-| 21563 | 25384 | +      | S      | surface glycoprotein        | YP_009724390.1     | structural protein; spike protein                                         |
-| 25393 | 26220 | +      | ORF3a  | ORF3a protein               | YP_009724391.1     |                                                                           |
-| 26245 | 26472 | +      | E      | envelope protein            | YP_009724392.1     | ORF4; structural protein                                                   |
-| 26523 | 27191 | +      | M      | membrane glycoprotein       | YP_009724393.1     | ORF5; structural protein                                                   |
-| 27202 | 27387 | +      | ORF6   | ORF6 protein                | YP_009724394.1     |                                                                           |
-| 27394 | 27759 | +      | ORF7a  | ORF7a protein               | YP_009724395.1     |                                                                           |
-| 27756 | 27887 | +      | ORF7b  | ORF7b                     | YP_009725318.1     |                                                                           |
-| 27894 | 28259 | +      | ORF8   | ORF8 protein                | YP_009724396.1     |                                                                           |
-| 28274 | 29533 | +      | N      | nucleocapsid phosphoprotein | YP_009724397.2     | ORF9; structural protein                                                   |
-| 29558 | 29674 | +      | ORF10  | ORF10 protein               | YP_009725255.1     |                                                                           |
+| Start | End   | Strand | Gene  | Product                     | UniProt Reference | Inference                                                 |
+| ----- | ----- | ------ | ----- | --------------------------- | ----------------- | --------------------------------------------------------- |
+| 266   | 13483 | +      | 1a    | ORF1a polyprotein           | YP_009725295.1    | pp1a                                                      |
+| 13468 | 21555 | +      | rep   | ORF1ab polyprotein          | YP_009724389.1    | translated by -1 ribosomal frameshift; ribosomal slippage |
+| 21563 | 25384 | +      | S     | surface glycoprotein        | YP_009724390.1    | structural protein; spike protein                         |
+| 25393 | 26220 | +      | ORF3a | ORF3a protein               | YP_009724391.1    |                                                           |
+| 26245 | 26472 | +      | E     | envelope protein            | YP_009724392.1    | ORF4; structural protein                                  |
+| 26523 | 27191 | +      | M     | membrane glycoprotein       | YP_009724393.1    | ORF5; structural protein                                  |
+| 27202 | 27387 | +      | ORF6  | ORF6 protein                | YP_009724394.1    |                                                           |
+| 27394 | 27759 | +      | ORF7a | ORF7a protein               | YP_009724395.1    |                                                           |
+| 27756 | 27887 | +      | ORF7b | ORF7b                       | YP_009725318.1    |                                                           |
+| 27894 | 28259 | +      | ORF8  | ORF8 protein                | YP_009724396.1    |                                                           |
+| 28274 | 29533 | +      | N     | nucleocapsid phosphoprotein | YP_009724397.2    | ORF9; structural protein                                  |
+| 29558 | 29674 | +      | ORF10 | ORF10 protein               | YP_009725255.1    |                                                           |
 
 
 here i open it in UGENE
 ![[Pasted image 20250311110602.png]]
-and GeneBank
+and GeneBank ref
 ![[Pasted image 20250311110651.png]]
+
+## Step 5(primers)
+
+extract S-gene sequence
+```Bash
+samtools faidx NODE_1_rc.fasta NODE_1_length_29907_cov_150.822528:21568-25389 > gene_S.fasta
+```
+https://www.ncbi.nlm.nih.gov/tools/primer-blast/primertool.cgi?ctg_time=1741684341&job_key=p615UcCgzQjqNsgzxVPsAb9I_TOSW-Yukw
+
+
+extra links 
+https://www.sci-hub.ru/10.1093/ajcp/aqaa029?ysclid=m84ah15miz92885018 #IMP #WL 
+
+https://www.sci-hub.ru/10.1007/978-1-4939-2438-7_1?ysclid=m84aihi3xx589567219 #IMP #WL
+
