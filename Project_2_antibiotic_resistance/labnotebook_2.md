@@ -72,11 +72,14 @@ for amp_res_1_fastqc.html
 basic statistics matches with calculated before
 
 but here we have red flag in "per sequence quality" for reverse reads
-![image](./images/fastq_read_2.png)
+![image](./images/fastqc_read_2.png)
 
 
 and "per sequence quality" & "Per tile sequence quality" for forward reads
-![[fastq_quality_read_1.png]]![[fastqc_tile_read_1.png]]
+![image_1_quality](images/fastqc_tile_read_1.png)
+![image_1_quality](images/fastq_quality_read_1.png)
+
+
 
 - **Per Sequence Quality (reverse reads)** – The average quality of individual reads is too low, indicating potential sequencing errors.
 - **Per Sequence Quality (forward reads)** – The same issue: read quality is dropping.
