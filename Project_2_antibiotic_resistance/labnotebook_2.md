@@ -1,3 +1,8 @@
+
+  original here: https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_2_antibiotic_resistance/labnotebook_2.md
+
+---
+
 # Install data
 ## Reference
 	first of all install reference from here:
@@ -578,7 +583,8 @@ or here
 ![](./files/m2.pdf)
 
 
-**Mechanisms of Action of Antibiotics **
+
+Mechanisms of Action of Antibiotics 
 
 1. **Inhibitors of microbial cell wall synthesis:**  
     Penicillins, cephalosporins, monobactams, carbapenems, polypeptides, fosfomycins.
