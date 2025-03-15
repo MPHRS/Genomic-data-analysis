@@ -67,9 +67,14 @@ for amp_res_1_fastqc.html
 | Sequences flagged as poor quality | 0                       |
 | Sequence length                   | 101                     |
 | %GC                               | 50                      |
+
+
 basic statistics matches with calculated before
+
 but here we have red flag in "per sequence quality" for reverse reads
-![[fastqc_read_2.png]]
+![image](./images/fastq_read_2.png)
+
+
 and "per sequence quality" & "Per tile sequence quality" for forward reads
 ![[fastq_quality_read_1.png]]![[fastqc_tile_read_1.png]]
 
