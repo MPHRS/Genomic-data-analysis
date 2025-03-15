@@ -1,0 +1,37 @@
+# Игнорирование биоинформатических файлов
+*.fasta
+*.fa
+*.fastq
+*.fq
+*.gff
+*.gff3
+*.gtf
+*.sam
+*.bam
+*.bai
+*.cram
+*.vcf
+*.bcf
+*.bed
+*.wig
+*.bigWig
+*.tsv
+*.csv
+
+# Временные и промежуточные файлы
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Игнорирование больших выходных данных
+*.log
+*.out
+*.err
+*.idx
+*.gz
+*.bz2
+*.zip
+*.tar
+*.7z
