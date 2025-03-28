@@ -1,3 +1,10 @@
+# authors:
+Добровольский Серафим
+Иван Михнюк
+
+original here:
+https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_3_E_coli_outbreak_investigation/Report.md
+
 # **Abstract**
 A hemolytic uremic syndrome (HUS) outbreak caused by a novel Escherichia coli strain was investigated using _de novo_ assembly in this study. Analysis revealed the presence of _stxA_ and _stxB_ genes encoding Shiga toxin, integrated alongside genes associated with prophages, indicating horizontal gene transfer. The strain exhibited resistance to β-lactam antibiotics due to _blaCTX-M-15_ and _blaTEM-1B_ genes associated with transposons. Assembly with paired-end and mate-pair  libraries improved N50  (842,010 bp vs. 42,716 bp). One of the contigs carrying virulence/resistance genes (NODE_10_length_86688_cov_74.209320) showed 98.85% identity to the pathogenic Escherichia coli W plasmid pRK1, suggesting these genes (including blaCTX-M-15 and blaTEM-1B) may be plasmid-borne, as they also showed 98.27% similarity with the virulent _Shingella sonnei_  plasmid. These findings highlight the role of mobile genetic elements in pathogen evolution.
 # **Introduction**
@@ -25,7 +32,7 @@ In your results section, briefly introduce the sequencing data (what are the sam
 
 Based on the analysis of the K-mer profile (see Figure 1), a K-mer peak of 124 was identified, leading to an estimated genome size of 5,321,947.74 bp and an approximate sequencing depth of 186.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcvDYqNaeTU-rL-t0_zpae7E_vK_1mIHb7FIgQLvSK-dhcQPAwtB8Fwo050PDPr1Y3-ghIhX9Vz4Bz_fgwWxgXM1jxpD-XZMnSrB1J8UqCqr5q46iJ9WxEF-6P7tDJtly_XLQLboQ?key=vyolZTAk97g8Ipdoy8Wenixj)Figure 1 – K-mer Profile Comparison
+![](./images/KMER.png)Figure 1 – K-mer Profile Comparison
 
   
 
@@ -89,7 +96,7 @@ Table 3 – Antibiotic Resistance Predictions
   
 # **Discussion**
 
-The pathogenic transformation of _E. coli_ X may occured as a result of the obtaining of critical virulence factors and mobile genetic elements that confer antibiotic resistance. The presence of _stxA_ and _stxB_ genes, which encode Shiga toxins, distinguishes this strain from the reference _E. coli_ 55989. These virulence genes are often associated with severe gastrointestinal and systemic infections. Their proximity to sequences related to phages suggests horizontal transfer through the integration of bacteriophages, which is a well-documented mechanism for the spread of toxin genes in pathogenic _E. coli_. Also that fact can beapproved by that the blast of node_10 with _stxA_ and _stxB_ genes show 98.27% identity with _Shingella sonnei_ plasmid. This genetic acquisition probably allowed _E. coli_ X to move from a commensal state to a pathogenic one capable of causing diseases in humans.
+The pathogenic transformation of _E. coli_ X may occured as a result of the obtaining of critical virulence factors and mobile genetic elements that confer antibiotic resistance. The presence of _stxA_ and _stxB_ genes, which encode Shiga toxins, distinguishes this strain from the reference _E. coli_ 55989. These virulence genes are often associated with severe gastrointestinal and systemic infections. Their proximity to sequences related to phages suggests horizontal transfer through the integration of bacteriophages, which is a well-documented mechanism for the spread of toxin genes in pathogenic _E. coli_. Also that fact can beapproved by that the blast of node_10 with _stxA_ and _stxB_ genes show 98.27% identity with _Shingella sonnei_ plasmid. This genetic acquisition probably allowed _E. coli_ X to move from a commensal state to a pathogenic one capable of causing diseases in humans[4].
 
 The strain’s resistance to β-lactam antibiotics arises from two acquired β-lactamase genes: _blaCTX-M-15_ (encoding an extended-spectrum β-lactamase) and _blaTEM-1B_ (a narrow-spectrum β-lactamase). These genes are located on a plasmid-derived contig (NODE_10). The analysis reveals that E. coli X has acquired antibiotic resistance through mobile genetic elements.  Furthermore, the strain possesses other resistance determinants (tetA, sul1/sul2, dfrA7, and aph genes) that mediate resistance to tetracyclines, sulfonamides, trimethoprim, and streptomycin, respectively. Given this multidrug-resistant profile, treatment should avoid all aforementioned antibiotic classes and instead utilize alternative agents from unaffected drug categories, selected based on susceptibility testing.
 
