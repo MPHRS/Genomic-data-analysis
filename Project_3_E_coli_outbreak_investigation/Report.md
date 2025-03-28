@@ -10,7 +10,7 @@ A hemolytic uremic syndrome (HUS) outbreak caused by a novel _Escherichia coli_ 
 # **Introduction**
 
 
-Hemolytic uremic syndrome (HUS) is a life-threatening condition characterized by kidney failure, hemolytic anemia, and thrombocytopenia, nowadays most commonly caused by Shiga toxin-producing _Escherichia coli_ (STEC) strains[1]. While E. coli typically exists as a harmless gut commensal, certain strains acquire virulence factors like Shiga toxins (encoded by stxA and stxB genes) through horizontal gene may transfer charring by bacteriophages or plasmids. This transformation process, exemplified by the integration of Shiga toxin-encoding prophages into the bacterial genome, converts non-pathogenic E. coli into dangerous STEC variants capable of damaging endothelial cells and causing systemic complications. Understanding these genetic mechanisms is crucial for tracking pathogenic transformations and developing interventions, especially as certain populations like young children remain particularly vulnerable to STEC infections and current treatment options remain limited to supportive care[2].
+Hemolytic uremic syndrome (HUS) is a life-threatening condition characterized by kidney failure, hemolytic anemia, and thrombocytopenia, nowadays most commonly caused by Shiga toxin-producing _Escherichia coli_ (STEC) strains[1]. While E. coli typically exists as a harmless gut commensal, certain strains acquire virulence factors like Shiga toxins (encoded by _stxA_ and _stxB_ genes) through horizontal gene may transfer charring by bacteriophages or plasmids. This transformation process, exemplified by the integration of Shiga toxin-encoding prophages into the bacterial genome, converts non-pathogenic E. coli into dangerous STEC variants capable of damaging endothelial cells and causing systemic complications. Understanding these genetic mechanisms is crucial for tracking pathogenic transformations and developing interventions, especially as certain populations like young children remain particularly vulnerable to STEC infections and current treatment options remain limited to supportive care[2].
 
 
 The rise of multidrug-resistant (MDR) _E. coli_ further complicates clinical management of infections. Resistance genes, such as those encoding extended-spectrum β-lactamases (ESBLs) like CTX-M-15, are often carried on mobile genetic elements (plasmids, transposons), enabling rapid circulation across bacterial populations. Traditional methods like reference-based genome alignment may fail to detect novel resistance or virulence loci, particularly in highly recombinant strains. _De novo_ genome assembly( without comparing on existing references) capturing unique genomic regions and mobile elements critical for understanding pathogen evolution. This methodology proves critical for analyzing outbreaks triggered by newly identified pathogen variants with novel genomic configurations[3].
@@ -49,7 +49,7 @@ Table 1 – Comparison of Paired-end vs. Paired-end + Mate-pair Libraries
 
 A 16S rRNA sequence (length: 1,537 bp) was identified, showing the highest similarity to _Escherichia coli_ 55989(100%). As a result, its genome was used as a reference for further analysis.
 
-Genome annotation and alignment to the reference genome revealed the presence of two genes (stxA, stxB) absent in the reference genome. These genes are known to be virulence factors. Additionally, genes _Bla1_ and _Bla2_, associated with β-lactam antibiotic resistance, were identified.
+Genome annotation and alignment to the reference genome revealed the presence of two genes (_stxA_, _stxB_) absent in the reference genome. These genes are known to be virulence factors. Additionally, genes _Bla1_ and _Bla2_, associated with β-lactam antibiotic resistance, were identified.
 
 Table 2 – Comparison of Paired-end vs. Paired-end + Mate-pair Libraries
 
@@ -61,7 +61,7 @@ Table 2 – Comparison of Paired-end vs. Paired-end + Mate-pair Libraries
 |_Bla1_|5,172,807 – 5,173,667|
 |_Bla2_|5,176,489 – 5,177,364|
 
-Genes associated with a phage were identified near stxA and stxB, while transposases were found in close proximity to _Bla1_ and _Bla2_. Further analysis revealed that one of the contigs(NODE_10_length_86688_cov_74.209320) is 98.85% identical to the _Escherichia coli_ W pRK1 and 98.27% similarity with the virulent _Shingella sonnei_ P9 plasmid.
+Genes associated with a phage were identified near _stxA_ and _stxB_, while transposases were found in close proximity to _Bla1_ and _Bla2_. Further analysis revealed that one of the contigs(NODE_10_length_86688_cov_74.209320) is 98.85% identical to the _Escherichia coli_ W pRK1 and 98.27% similarity with the virulent _Shingella sonnei_ P9 plasmid.
 
 Resistance phenotypes were compared between _Escherichia coli_ 55989 and another strain (_Escherichia coli_ X). Here, "+" indicates resistance, and "-" indicates susceptibility. The identified _Escherichia coli_ strain exhibits broad-spectrum resistance, particularly to beta-lactam antibiotics.
 
