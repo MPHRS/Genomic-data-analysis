@@ -1,5 +1,5 @@
 # authors:
-Seraph Dobrovolskii
+Seraph Dobrovolskii,
 Ivan Mikhniuk
 
 original here:
