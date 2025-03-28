@@ -67,7 +67,7 @@ While these findings suggest possible resistance mechanisms, additional biochemi
 2. Poirel L.Madec J.Lupo A.Schink A.Kieffer N.Nordmann P.Schwarz S.2018.Antimicrobial Resistance in Escherichia coli. Microbiol Spectr6:10.1128/microbiolspec.arba-0026-2017.https://doi.org/10.1128/microbiolspec.arba-0026-2017
 3. Spratt BG. Distinct penicillin binding proteins involved in the division, elongation, and shape of Escherichia coli K12. Proc Natl Acad Sci U S A. 1975 Aug;72(8):2999-3003. doi: 10.1073/pnas.72.8.2999. PMID: 1103132; PMCID: PMC432906.
 
-# Supplementary Materials
+## Supplementary Materials
 
 All commands and results information could be found here(lab_notebook):
 https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_2_antibiotic_resistance/labnotebook_2.md#install-data
