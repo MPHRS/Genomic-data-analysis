@@ -1,6 +1,6 @@
 # authors:
-Добровольский Серафим
-Михнюк Иван
+Seraph Dobrovolskii
+Ivan Mikhniuk
 
 original here:
 https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_3_E_coli_outbreak_investigation/Report.md
