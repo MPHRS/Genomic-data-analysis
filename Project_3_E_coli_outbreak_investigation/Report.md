@@ -96,6 +96,11 @@ The pathogenic transformation of _E. coli_ X may occured as a result of the ob
 
 The strain’s resistance to β-lactam antibiotics arises from two acquired β-lactamase genes: _blaCTX-M-15_ (encoding an extended-spectrum β-lactamase) and _blaTEM-1B_ (a narrow-spectrum β-lactamase). These genes are located on a plasmid-derived contig (NODE_10). The analysis reveals that E. coli X has acquired antibiotic resistance through mobile genetic elements.  Furthermore, the strain possesses other resistance determinants (_tetA_, _sul1_/_sul2_, _dfrA7_, and aph genes) that mediate resistance to tetracyclines, sulfonamides, trimethoprim, and streptomycin, respectively. Given this multidrug-resistant profile, treatment should avoid all aforementioned antibiotic classes and instead utilize alternative agents from unaffected drug categories, selected based on susceptibility testing.
 
+# **Supplementary materials**
+
+![image](https://github.com/user-attachments/assets/2eb42cef-50b9-4567-9e82-440acefaf4a7)
+K-mer profile before and after correction using SPAdes
+
 # References
 
 1. Bruyand M, Mariani-Kurkdjian P, Gouali M, de Valk H, King LA, Le Hello S, Bonacorsi S, Loirat C. Hemolytic uremic syndrome due to Shiga toxin-producing Escherichia coli infection. Med Mal Infect. 2018 May;48(3):167-174. doi: 10.1016/j.medmal.2017.09.012. Epub 2017 Oct 18. PMID: 29054297.
