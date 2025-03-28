@@ -1,6 +1,6 @@
 # authors:
-Добровольский Серафим
-Михнюк Иван
+Seraph Dobrovolskii,
+Ivan Mikhniuk
 
 original here:
 https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_3_E_coli_outbreak_investigation/Report.md
@@ -95,6 +95,11 @@ Table 3 – Antibiotic Resistance Predictions
 The pathogenic transformation of _E. coli_ X may occured as a result of the obtaining of critical virulence factors and mobile genetic elements that confer antibiotic resistance. The presence of _stxA_ and _stxB_ genes, which encode Shiga toxins, distinguishes this strain from the reference _E. coli_ 55989. These virulence genes are often associated with severe gastrointestinal and systemic infections. Their proximity to sequences related to phages suggests horizontal transfer through the integration of bacteriophages, which is a well-documented mechanism for the spread of toxin genes in pathogenic _E. coli_. Also that fact can beapproved by that the blast of node_10 with _stxA_ and _stxB_ genes show 98.27% identity with _Shingella sonnei_ plasmid. This genetic acquisition probably allowed _E. coli_ X to move from a commensal state to a pathogenic one capable of causing diseases in humans[4].
 
 The strain’s resistance to β-lactam antibiotics arises from two acquired β-lactamase genes: _blaCTX-M-15_ (encoding an extended-spectrum β-lactamase) and _blaTEM-1B_ (a narrow-spectrum β-lactamase). These genes are located on a plasmid-derived contig (NODE_10). The analysis reveals that E. coli X has acquired antibiotic resistance through mobile genetic elements.  Furthermore, the strain possesses other resistance determinants (_tetA_, _sul1_/_sul2_, _dfrA7_, and aph genes) that mediate resistance to tetracyclines, sulfonamides, trimethoprim, and streptomycin, respectively. Given this multidrug-resistant profile, treatment should avoid all aforementioned antibiotic classes and instead utilize alternative agents from unaffected drug categories, selected based on susceptibility testing.
+
+# **Supplementary materials**
+
+![image](https://github.com/user-attachments/assets/2eb42cef-50b9-4567-9e82-440acefaf4a7)
+K-mer profile before and after correction using SPAdes
 
 # References
 
