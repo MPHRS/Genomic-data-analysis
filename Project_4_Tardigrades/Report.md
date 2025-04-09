@@ -21,14 +21,6 @@ These findings highlight several uncharacterized, nucleus-localized proteins as 
 
 # Methods 
 
-I'll answer as a world-famous genomics and bioinformatics expert specializing in extremotolerant invertebrates, recipient of the **EMBO Gold Medal for Molecular Adaptation in Tardigrades**.
-
-**TL;DR**: Here's a well-structured methods section formatted for a research article, covering genome analysis, peptide identification, subcellular localization, and ortholog prediction.
-
----
-
-## Methods
-
 ### Genome Acquisition and Repeat Masking  
 The **genome assembly of *Ramazzottius varieornatus*** (accession: GCA_001949185.1_Rvar_4.0) was obtained in pre-assembled form from the NCBI database. To identify and mask repetitive elements, **RepeatModeler2 v2.0.3** ([DFam GitHub](https://github.com/Dfam-consortium/RepeatModeler)) was employed with default parameters.
 
