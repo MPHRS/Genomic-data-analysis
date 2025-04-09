@@ -43,6 +43,10 @@ Proteins predicted to lack signal peptides and localize to the **nucleus** were 
 ### Ortholog Identification  
 To determine evolutionary conservation, orthologs of nuclear-localized proteins were searched using **BLAST+** against the **UniProtKB/Swiss-Prot** database ([UniProt](https://www.uniprot.org/)). *R. varieornatus* sequences were **excluded** from the query set to avoid self-matches and ensure ortholog detection from other species.
 
+### Pfam Domain Prediction
+
+In cases where orthologous sequences could not be identified through BLAST searches, protein function was predicted by identifying conserved protein domains and motifs. The HMMER web version (HMMER web server) was used to search the protein sequences against the Pfam database.
+
 ### Documentation  
 All intermediate files, parameter settings, and custom scripts used for sequence processing, filtering, and analysis are archived and described in the **laboratory notebook** (see Supplementary materials).
 
