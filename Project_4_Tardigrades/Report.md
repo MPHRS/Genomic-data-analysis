@@ -44,11 +44,7 @@ Proteins predicted to lack signal peptides and localize to the **nucleus** were 
 To determine evolutionary conservation, orthologs of nuclear-localized proteins were searched using **BLAST+** against the **UniProtKB/Swiss-Prot** database ([UniProt](https://www.uniprot.org/)). *R. varieornatus* sequences were **excluded** from the query set to avoid self-matches and ensure ortholog detection from other species.
 
 ### Documentation  
-All intermediate files, parameter settings, and custom scripts used for sequence processing, filtering, and analysis are archived and described in the **laboratory notebook** (see Appendix).
-
----
-
-Let me know if you'd like to add citations in a specific format (e.g., APA, MLA, or journal-specific), or expand the section on gene model training or localization confidence scoring.
+All intermediate files, parameter settings, and custom scripts used for sequence processing, filtering, and analysis are archived and described in the **laboratory notebook** (see Supplementary materials).
 
 ---
 
@@ -130,9 +126,9 @@ Overall, our findings highlight a small subset of candidate proteins with potent
 
 # Refernces
 1) Beblo-Vranesevic K., Bohmeier M., Perras A.K., Schwendner P., Rabbow E., Moissl-Eichinger C., Cockell C.S., Vannier P., Marteinsson V.T., Monaghan E.P., et al. Lack of correlation of desiccation and radiation tolerance in microorganisms from diverse extreme environments tested under anoxic conditions. FEMS Microbiol. Lett. 2018;365 doi: 10.1093/femsle/fny044.
-1) Hashimoto T, Horikawa DD, Saito Y, Kuwahara H, Kozuka-Hata H, Shin-I T, Minakuchi Y, Ohishi K, Motoyama A, Aizu T, Enomoto A, Kondo K, Tanaka S, Hara Y, Koshikawa S, Sagara H, Miura T, Yokobori SI, Miyagawa K, Suzuki Y, Kubo T, Oyama M, Kohara Y, Fujiyama A, Arakawa K, Katayama T, Toyoda A, Kunieda T. Extremotolerant tardigrade genome and improved radiotolerance of human cultured cells by tardigrade-unique protein. Nat Commun. 2016 Sep 20;7:12808. doi: 10.1038/ncomms12808. PMID: 27649274; PMCID: PMC5034306.
-2) Ho SY, Lorent K, Pack M, Farber SA. Zebrafish fat-free is required for intestinal lipid absorption and Golgi apparatus structure. Cell Metab. 2006 Apr;3(4):289-300. doi: 10.1016/j.cmet.2006.03.001. PMID: 16581006; PMCID: PMC2247414.
-3) UniProt Consortium. _Myosin regulatory light chain – Caenorhabditis elegans (Q09510)_. UniProt. Available at: [https://www.uniprot.org/uniprotkb/Q09510/entry](https://www.uniprot.org/uniprotkb/Q09510/entry) (accessed April 9, 2025).
+2) Hashimoto T, Horikawa DD, Saito Y, Kuwahara H, Kozuka-Hata H, Shin-I T, Minakuchi Y, Ohishi K, Motoyama A, Aizu T, Enomoto A, Kondo K, Tanaka S, Hara Y, Koshikawa S, Sagara H, Miura T, Yokobori SI, Miyagawa K, Suzuki Y, Kubo T, Oyama M, Kohara Y, Fujiyama A, Arakawa K, Katayama T, Toyoda A, Kunieda T. Extremotolerant tardigrade genome and improved radiotolerance of human cultured cells by tardigrade-unique protein. Nat Commun. 2016 Sep 20;7:12808. doi: 10.1038/ncomms12808. PMID: 27649274; PMCID: PMC5034306.
+3) Ho SY, Lorent K, Pack M, Farber SA. Zebrafish fat-free is required for intestinal lipid absorption and Golgi apparatus structure. Cell Metab. 2006 Apr;3(4):289-300. doi: 10.1016/j.cmet.2006.03.001. PMID: 16581006; PMCID: PMC2247414.
+4) UniProt Consortium. _Myosin regulatory light chain – Caenorhabditis elegans (Q09510)_. UniProt. Available at: [https://www.uniprot.org/uniprotkb/Q09510/entry](https://www.uniprot.org/uniprotkb/Q09510/entry) (accessed April 9, 2025).
 
 # Supplementary material
 
