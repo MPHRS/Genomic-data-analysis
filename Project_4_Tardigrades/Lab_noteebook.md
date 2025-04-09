@@ -450,3 +450,93 @@ most relevant
 | g3428.t1  | [Q09510.1](https://www.ncbi.nlm.nih.gov/protein/Q09510.1?report=genbank&log$=prottop&blast_rank=1&RID=Z89UZCH9016 "Show report for Q09510.1")<br>9e-65 | EF-hand_7 (7.27e-06) | Mitochondrial (18)      | OTHER   |
 
 
+### Recommended Entries for Experimental Verification as Novel Tardigrade-Specific DNA-Binding Proteins:
+
+#### **1. g14472.t1**
+
+- **BLAST Hit**:
+    
+    - **Protein**: Damage suppressor protein ([P0DOW4.1](https://www.ncbi.nlm.nih.gov/protein/P0DOW4.1))
+        
+    - **E-value**: `0.0` (100% identity to _Ramazzottius varieornatus_ protein)
+        
+- **Key Features**:
+    
+    - **Function**: Binds chromatin, protects DNA from hydroxyl radicals and X-ray damage (experimentally validated in tardigrades).
+        
+    - **Localization**: Nuclear (`nucl: 28` via WoLF PSORT).
+        
+    - **Domain**: None in Pfam, but UniProt annotation confirms DNA-protective role.
+        
+- **Reliability**:
+    
+    - **High confidence**: Direct experimental evidence of DNA interaction in tardigrades.
+        
+    - **Specificity**: Tardigrade-specific homolog with no close relatives in other species.
+        
+
+---
+
+#### **2. g15484.t1**
+
+- **BLAST Hit**:
+    
+    - **Protein**: Vacuolar protein sorting-associated protein 51 homolog ([Q155U0.1](https://www.ncbi.nlm.nih.gov/protein/Q155U0.1))
+        
+    - **E-value**: `0.0` (high-confidence match)
+        
+- **Key Features**:
+    
+    - **Function**: Golgi/endosome trafficking (GARP/EARP complexes).
+        
+    - **Localization**: Nuclear (`nucl: 17.5`) despite UniProt annotation for Golgi/endosomes.
+        
+    - **Domain**: Vps51 (`8.55e-22`), involved in vesicle transport.
+        
+- **Reliability**:
+    
+    - **Moderate caution**: Nuclear localization conflicts with UniProt data.
+        
+    - **Hypothesis**: May moonlight in DNA repair via chromatin organization (requires validation).
+        
+
+---
+
+#### **3. g10514.t1**
+
+- **BLAST Hit**: No significant hits.
+    
+- **Key Features**:
+    
+    - **Localization**: Nuclear (`nucl: 19`).
+        
+    - **Domains**: None detected.
+        
+- **Reliability**:
+    
+    - **Novelty candidate**: No homologs in databases, suggesting tardigrade-specificity.
+        
+    - **Risk**: Unknown function; prioritize if g14472.t1 validation succeeds.
+        
+
+---
+
+#### **4. g3428.t1**
+
+- **BLAST Hit**:
+    
+    - **Protein**: Myosin regulatory light chain ([Q09510.1](https://www.ncbi.nlm.nih.gov/protein/Q09510.1))
+        
+    - **E-value**: `9e-65` (strong match to _C. elegans_ myosin).
+        
+- **Key Features**:
+    
+    - **Function**: Regulates myosin II activity (cytoskeleton, no DNA-binding role).
+        
+    - **Domain**: EF-hand_7 (`7.27e-06`; calcium-binding).
+        
+    - **Localization**: Mitochondrial (`mito: 18`).
+        
+- **Reliability**:
+    
+    - **Low priority**: No evidence of DNA interaction; likely a false positive.
