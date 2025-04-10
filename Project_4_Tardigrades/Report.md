@@ -1,3 +1,5 @@
+authors: Seraph Dobrovolskii, Ivan Mikhniuk
+
 original here: https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_4_Tardigrades/Report.md
 # Nuclear-Localized Proteins Identified from Chromatid-Derived Peptides in Ramazzottius varieornatus: Insights into DNA Protection Mechanisms
 
