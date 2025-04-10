@@ -25,7 +25,7 @@ These findings highlight several uncharacterized, nucleus-localized proteins as 
 The **genome assembly of *Ramazzottius varieornatus*** (accession: GCA_001949185.1_Rvar_4.0) was obtained in pre-assembled form from the NCBI database. To identify and mask repetitive elements, **RepeatModeler2 v2.0.3** ([DFam GitHub](https://github.com/Dfam-consortium/RepeatModeler)) was employed with default parameters.
 
 ### Gene Prediction  
-Genome annotation was performed using **AUGUSTUS** ([AUGUSTUS website](https://bioinf.uni-greifswald.de/augustus/)). Default settings were used.
+Genome annotation was performed using **AUGUSTUS v3.5.0** ([AUGUSTUS website](https://bioinf.uni-greifswald.de/augustus/)). Default settings were used.
 
 ### Peptide Identification via Mass Spectrometry  
 Short peptides were experimentally derived through **tandem mass spectrometry (MS/MS)**. The resulting peptide sequences were curated and are publicly available via [Yandex Disk](https://disk.yandex.ru/d/xJqQMGX77Xueqg).
