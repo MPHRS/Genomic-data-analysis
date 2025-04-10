@@ -64,7 +64,7 @@ The g15484.t1 protein shares 45.03% identity with a gene from Danio rerio and is
 
 The g3428.t1 protein shares 56.6% identity with a gene from Caenorhabditis elegans and functions in regulating myosin II activity and organization during embryo elongation.
 
-The g10514.t1 didn't show any result with blast search, but have nuclear localiztion due to WoLF and TagretP.
+The g10514.t1 and g10513.t1 didn't show any result with blast search, but have nuclear localiztion due to WoLF and TagretP.
 
 > Table 1. Predicted Proteins with 100% Identity to MS/MS Peptides and Homology to Known Proteins
 
