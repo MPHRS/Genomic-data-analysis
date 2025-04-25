@@ -141,3 +141,14 @@ Only 103 hits on X (low for a diploid X) further confirms the sample is genetica
 
 
 
+
+
+|               |                     |                  |                            |               |              |                                        |                                                 |                   |                                                                                      |
+| ------------- | ------------------- | ---------------- | -------------------------- | ------------- | ------------ | -------------------------------------- | ----------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------ |
+| SNV ID (rsID) | Chromosome:Position | Ref/Alt Genotype | Population Frequency (EUR) | Gene          | Variant Type | Protein Consequence                    | Phenotypic Effect                               | Annotation Source | Additional Information                                                               |
+| rs4988235     | chr2:135851076      | G/G              | 0.456934                   | MCM6          | SNV          | Intron Variant                         | Likely lactose intolerant in adulthood          | SNPedia / dbSNP   | Can digest milk if genotype is (T;T)                                                 |
+| rs121912617   | chr12:26122364      | G/G              | 0.99993                    | BHLHE41, SSPN | SNV          | Missense Variant, Intron Variant       | Normal sleep pattern; needs 8h sleep            | SNPedia / dbSNP   | (G;G) is typical, (A;A) short sleeper mutation                                       |
+| rs17822931    | chr16:48224287      | C/C              | 0.877269                   | ABCC11        | SNV          | Missense Variant                       | Wet earwax, normal body odour, normal colostrum | SNPedia / dbSNP   | (T;T) leads to dry earwax, no body odour; common in East Asians                      |
+| rs4680        | chr22:19963748      | G/A              | 0.491334                   | COMT, MIR4761 | SNV          | Missense Variant, 2KB Upstream Variant | Intermediate dopamine levels                    | SNPedia / dbSNP   | (A;A) — lower COMT activity, higher dopamine, more exploratory, lower pain threshold |
+| rs1799971     | chr6:154039662      | A/A              | 0.867641                   | OPRM1         | SNV          | Missense Variant                       | Typical response to alcohol                     | SNPedia / dbSNP   | May influence opioid response (heroin, codeine, morphine)                            |
+| rs9939609     | chr16:53786615      | T/T              | 0.58975                    | FTO           | SNV          | Intron Variant                         | Lower risk of obesity and type 2 diabetes       | SNPedia / dbSNP   | (A;A) is associated with higher obesity risk                                         |
