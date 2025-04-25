@@ -66,9 +66,10 @@ Table 1. Teachers SNPs and Their Phenotypic Associations
 
 # Discussion
 
-  
+Array‑based SNP analysis enables rapid annotation of known variants to infer phenotypic traits, but cannot detect novel or rare mutations outside the predefined probe set, limiting discovery of uncharacterized loci.
 
-Individuals homozygous for the ancestral G allele (G/G, equivalent to C/C in alternative strand notation) at the rs4988235 locus typically exhibit a post-weaning decline in LCT gene expression. This phenotype results from the inability of a cis-regulatory element located in intron 13 of the MCM6 gene to sustain LCT transcriptional activity beyond early childhood. The regulatory variant disrupts enhancer function necessary for lactase persistence, leading to a gradual developmental downregulation of lactase production. 
+
+Phenotypic predictions from key SNPs provided actionable insights: individuals homozygous for the ancestral G allele (G/G, equivalent to C/C in alternative strand notation) at the rs4988235 locus typically exhibit a post-weaning decline in LCT gene expression. This phenotype results from the inability of a cis-regulatory element located in intron 13 of the MCM6 gene to sustain LCT transcriptional activity beyond early childhood. The regulatory variant disrupts enhancer function necessary for lactase persistence, leading to a gradual developmental downregulation of lactase production. 
 
 # References
 
