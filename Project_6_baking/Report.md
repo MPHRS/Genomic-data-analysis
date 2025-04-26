@@ -85,31 +85,15 @@ Table 1. Distribution of differentially expressed genes by GO categories.
 | **mRNA processing** (GO:0006397)                                        | `YEL026W`                                                                                                               |               **1/48** (2.08%) |        **170/6489** (2.62%) |     |
 
 The analysis showed that a significant portion of the differentially expressed genes are related to fundamental cellular metabolic processes, including ribosome biogenesis, transcription, and substance transport.
-Genes involved in carbohydrate metabolism are of particular interest in the context of our study. Specifically:
+Genes involved in carbohydrate metabolism are of particular interest in the context of our study. The analysis highlighted several carbohydrate‐related GO‐Slim terms, each represented by a small set of genes:
 
-Carbohydrate metabolic process (GO:0005975)
-
-    YBR105C — PGI1 — Phosphoglucose isomerase, a key enzyme in glycolysis
-
-    YER062C — HXK2 — Hexokinase 2, catalyzes the first step in glycolysis
-
-    YKR097W — PTS1 — Phosphotriose isomerase, an intermediate step in glycolysis
-
-    YOL136C — RGT2 — Glucose sensor on the membrane, involved in regulating the shift to fermentation
-
-Carbohydrate transport (GO:0008643)
-
-    YDR536W — STL1 — Sugar transporter
-
-    YHR094C — HXT1 — Low-affinity glucose transporter (important at high sugar concentrations, typical for fermentation)
-
-Generation of precursor metabolites and energy (GO:0006091)
-
-    YOL136C — (repeated) — RGT2, as mentioned above; indirectly influences through the regulation of HXT group expression.
-
-Monocarboxylic acid metabolic process (GO:0032787)
-
-    YOL136C — (again) — RGT2, indirectly related through the metabolism of glycolysis products.
+- **Carbohydrate metabolic process (GO:0005975):** YBR105C, YER062C, YKR097W, YOL136C
+    
+- **Carbohydrate transport (GO:0008643):** YDR536W, YHR094C
+    
+- **Generation of precursor metabolites and energy (GO:0006091):** YOL136C
+    
+- **Monocarboxylic acid metabolic process (GO:0032787):** YOL136C
 
 Five out of the six analyzed genes, some of which are simultaneously involved in multiple processes, demonstrated a statistically significant increase in expression (log2FoldChange > 2.5, padj < 0.001), while the YKR097W gene showed the opposite trend with a marked decrease in expression levels (Fig. 1).
 
@@ -125,12 +109,16 @@ Our analysis of Saccharomyces cerevisiae RNA-seq data before (0 min) and during 
 
 Building on the global shifts we observed, let’s zoom in on **carbohydrate metabolic process (GO:0005975)** and then contrast one clearly **up-regulated** GO term with one **down-regulated** GO term, to see how they contribute to the yeast’s metabolic switch.
 
-| Gene                   | Function                                                  | log₂FC | Regulation |
-| ---------------------- | --------------------------------------------------------- | ------ | ---------- |
-| **YBR105C**  <br>VID24 | Phosphoglucose isomerase (glycolysis & PPP)               | +4.92  | up         |
-| **YER062C**  <br>GPP2  | Hexokinase 2 (glucose → G6P; glucose‐repression via Mig1) | +7.90  | up         |
-| **YKR097W**  <br>PCK1  | Phosphotriose isomerase (glycolytic intermediate)         | –4.71  | down       |
-| **YOL136C**  <br>PFK27 | Membrane glucose sensor                                   | +5.71  | up         |
+table 2. genes differential expression for carbohydrate metabolic process.
+
+| Gene                   | Function                                                                                 | log₂FC  | Regulation |
+| ---------------------- | ---------------------------------------------------------------------------------------- | ------- | ---------- |
+| **YBR105C**  <br>VID24 | Phosphoglucose isomerase (glycolysis & PPP)                                              | +4.92   | up         |
+| **YER062C**  <br>GPP2  | Hexokinase 2 (glucose → G6P; glucose‐repression via Mig1)                                | +7.90   | up         |
+| **YKR097W**  <br>PCK1  | Phosphotriose isomerase (glycolytic intermediate)                                        | –4.71   | down       |
+| **YOL136C**  <br>PFK27 | Membrane glucose sensor                                                                  | +5.71   | up         |
+| YDR536W STL1           | Glycerol proton symporter (osmosensing response; transiently induced upon osmotic shock) | +7.8760 | up         |
+| YHR094C HXT1           | Low-affinity glucose transporter (high-capacity uptake at elevated glucose levels)       | +7.8836 | up         |
 
 **Down-regulation of PCK1**  
 PCK1 encodes phosphoenolpyruvate carboxykinase, the rate-limiting enzyme of gluconeogenesis. When extracellular glucose becomes plentiful, the cell abandons glucose synthesis in favor of high-flux glycolysis. Glucose induces a hierarchical repression cascade that shuts down transcription of gluconeogenic genes, and simultaneously accelerates degradation of existing PCK1 mRNAs. Together, these mechanisms rapidly remove Pck1p and its transcript, preventing futile glucose production under fermentative conditions[2].
