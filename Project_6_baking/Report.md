@@ -19,7 +19,7 @@ https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_6_baking/Report
 
 
 # **Methods**
-The analysis utilized publicly available RNA-seq data from Saccharomyces cerevisiae (SRA accessions SRR941816-SRR941819). The reference genome of strain S288C (assembly GCF_000146045.2_R64) and the annotation GFF file were obtained from NCBI.
+The analysis utilized publicly available RNA-seq data from Saccharomyces cerevisiae fermentation experiments (SRA accessions SRR941816-SRR941819), which represent two biological replicates at 0-minute and 30-minute fermentation time points. The reference genome for strain S288C (assembly GCF_000146045.2_R64) and its annotation GFF file were obtained from NCBI, with additional genomic context provided by the Saccharomyces Genome Database (SGD).
 
 Read alignment was performed using HISAT2 (v2.2.1) with default parameters after genome indexing. Resulting BAM files were sorted via SAMtools (v1.15). Gene expression quantification was conducted using featureCounts from the Subread package (v2.0.8) with the -g gene_id parameter. Prior to analysis, GFF annotations were converted to GTF format using gffread (v0.12.7), followed by attribute corrections based on guidelines from a public Colab notebook.
 
@@ -29,6 +29,8 @@ The complete analysis scripts and intermediate files are available in the labora
 
 
 # **Results**
+The total number of reads per sample ranged from 1.7 to 9.9 million, with the proportion of successfully aligned reads ranging from 94.3% to 96.2%. In all samples, more than 87% of reads were mapped to a single genomic location, while the proportion of reads not aligned to any position did not exceed 6%.
+
 During the work, 50 genes with significant differential expression were selected and ranked by p-value. Functional annotation allowed for their distribution into Gene Ontology (GO) categories. For each category, both the number of genes present among the selected 50 and their total representation in the annotated genome were calculated. Summary data are presented in Table 1.
 
 Table 1. Distribution of differentially expressed genes by GO categories.
