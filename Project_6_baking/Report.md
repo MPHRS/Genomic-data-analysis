@@ -8,8 +8,6 @@ original here:
 https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_6_baking/Report.md
 
 # Differential expression of genes associated with carbohydrate metabolism and transport in Saccharomyces cerevisiae under fermentation conditions
-## Abstract
-
 ---
 
 # **Abstract**
