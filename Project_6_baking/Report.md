@@ -19,7 +19,13 @@ https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_6_baking/Report
 
 
 # **Methods**
+The analysis utilized publicly available RNA-seq data from Saccharomyces cerevisiae (SRA accessions SRR941816-SRR941819). The reference genome of strain S288C (assembly GCF_000146045.2_R64) and the annotation GFF file were obtained from NCBI.
 
+Read alignment was performed using HISAT2 (v2.2.1) with default parameters after genome indexing. Resulting BAM files were sorted via SAMtools (v1.15). Gene expression quantification was conducted using featureCounts from the Subread package (v2.0.8) with the -g gene_id parameter. Prior to analysis, GFF annotations were converted to GTF format using gffread (v0.12.7), followed by attribute corrections based on guidelines from a public Colab notebook.
+
+Differential expression analysis was implemented in R (v4.3.1) using the DESeq2 package (v1.38.3), including normalization and statistical processing stages. Functional annotation of the top 50 differentially expressed genes was performed via the GO Slim Mapper online tool with default settings. Results were visualized using custom R scripts provided in the supplementary materials.
+
+The complete analysis scripts and intermediate files are available in the laboratory journal.
 
 
 # **Results**
@@ -64,9 +70,10 @@ Table 1. Distribution of differentially expressed genes by GO categories.
 | nucleobase-containing compound transport (GO:0015931)               | YHR196W                                                                                           | 1 of 48 genes (2.08%)      | 121 of 6489 annotated genes (1.86%) |
 | cytoplasmic translation (GO:0002181)                                | YLR264W                                                                                           | 1 of 48 genes (2.08%)      | 169 of 6489 annotated genes (2.60%) |
 | mRNA processing (GO:0006397)                                        | YEL026W                                                                                           | 1 of 48 genes (2.08%)      | 170 of 6489 annotated genes (2.62%) |
-The analysis showed that a significant portion of the differentially expressed genes are related to fundamental cellular metabolic processes, including ribosome biogenesis, transcription, and substance transport.
 
+The analysis showed that a significant portion of the differentially expressed genes are related to fundamental cellular metabolic processes, including ribosome biogenesis, transcription, and substance transport.
 Genes involved in carbohydrate metabolism are of particular interest. Specifically:
+
 Carbohydrate metabolic process (GO:0005975)
 
     YBR105C — PGI1 — Phosphoglucose isomerase, a key enzyme in glycolysis
@@ -90,6 +97,11 @@ Generation of precursor metabolites and energy (GO:0006091)
 Monocarboxylic acid metabolic process (GO:0032787)
 
     YOL136C — (again) — RGT2, indirectly related through the metabolism of glycolysis products.
+
+Five out of the six analyzed genes demonstrated a statistically significant increase in expression (log2FoldChange > 2.5, padj < 0.001), while the YKR097W gene showed the opposite trend with a marked decrease in expression levels (Fig. 1).
+
+![image](https://github.com/user-attachments/assets/dd05fba3-1cd9-4df3-8258-5d2c712b9048)
+
 
   
 # **Discussion**
