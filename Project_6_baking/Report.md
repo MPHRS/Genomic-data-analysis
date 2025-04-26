@@ -74,7 +74,7 @@ Table 1. Distribution of differentially expressed genes by GO categories.
 | mRNA processing (GO:0006397)                                        | YEL026W                                                                                           | 1 of 48 genes (2.08%)      | 170 of 6489 annotated genes (2.62%) |
 
 The analysis showed that a significant portion of the differentially expressed genes are related to fundamental cellular metabolic processes, including ribosome biogenesis, transcription, and substance transport.
-Genes involved in carbohydrate metabolism are of particular interest. Specifically:
+Genes involved in carbohydrate metabolism are of particular interest in the context of our study. Specifically:
 
 Carbohydrate metabolic process (GO:0005975)
 
