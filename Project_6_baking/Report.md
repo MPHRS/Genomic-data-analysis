@@ -7,6 +7,9 @@ Ivan Mikhniuk
 original here:
 https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_6_baking/Report.md
 
+# Differential expression of genes associated with carbohydrate metabolism and transport in Saccharomyces cerevisiae under fermentation conditions
+## Abstract
+
 ---
 
 # **Abstract**
@@ -102,7 +105,9 @@ Monocarboxylic acid metabolic process (GO:0032787)
 
 Five out of the six analyzed genes, some of which are simultaneously involved in multiple processes, demonstrated a statistically significant increase in expression (log2FoldChange > 2.5, padj < 0.001), while the YKR097W gene showed the opposite trend with a marked decrease in expression levels (Fig. 1).
 
-![image](https://github.com/user-attachments/assets/dd05fba3-1cd9-4df3-8258-5d2c712b9048)
+![image](https://github.com/user-attachments/assets/471c6256-1c3d-4794-9f4b-0c1efa9a3863)
+
+
 
 
   
