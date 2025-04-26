@@ -283,7 +283,7 @@ and get the table
 | cytoplasmic translation (GO:0002181)                                | YLR264W                                                                                           | 1 of 48 genes (2.08%)      | 169 of 6489 annotated genes (2.60%) |
 | mRNA processing (GO:0006397)                                        | YEL026W                                                                                           | 1 of 48 genes (2.08%)      | 170 of 6489 annotated genes (2.62%) |
 
-edit graph 
+edit graph so heatmap contains top 50 dif expression genes
 
 ```
 cat norm-matrix-deseq2.txt | Rscript ../scripts/draw-heatmap_top_genes.r genes.txt output_2.pdf
