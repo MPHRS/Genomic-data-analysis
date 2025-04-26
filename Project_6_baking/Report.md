@@ -98,7 +98,7 @@ Monocarboxylic acid metabolic process (GO:0032787)
 
     YOL136C — (again) — RGT2, indirectly related through the metabolism of glycolysis products.
 
-Five out of the six analyzed genes demonstrated a statistically significant increase in expression (log2FoldChange > 2.5, padj < 0.001), while the YKR097W gene showed the opposite trend with a marked decrease in expression levels (Fig. 1).
+Five out of the six analyzed genes, some of which are simultaneously involved in multiple processes, demonstrated a statistically significant increase in expression (log2FoldChange > 2.5, padj < 0.001), while the YKR097W gene showed the opposite trend with a marked decrease in expression levels (Fig. 1).
 
 ![image](https://github.com/user-attachments/assets/dd05fba3-1cd9-4df3-8258-5d2c712b9048)
 
@@ -108,15 +108,12 @@ Five out of the six analyzed genes demonstrated a statistically significant incr
 Анализ ключевых генов, связанных с углеводным метаболизмом и транспортом, выявил их взаимосвязь в контексте адаптации клетки к изменению доступности глюкозы.
 
 PGI1 (YBR105C) – фосфоглюкоизомераза, играет центральную роль в гликолизе и пентозофосфатном пути. Повышенная экспрессия (log2FoldChange > 2.5) указывает на усиление катаболизма глюкозы
-. У Arabidopsis PGI1 также участвует в синтезе изопреноидных гормонов через MEP-путь
-
-, что предполагает его возможную роль в сигналинге, связанном с ростом клетки.
 
 HXK2 (YER062C) – гексокиназа 2, выполняет двойную функцию: катализирует фосфорилирование глюкозы и регулирует транскрипцию генов через взаимодействие с репрессором Mig1
 . Высокая экспрессия согласуется с активацией гликолиза и подавлением альтернативных метаболических путей (например, дыхания) при избытке глюкозы
 
 
-PTS1 (YKR097W) – фосфотриозоизомераза, участвует в промежуточных этапах гликолиза. Неожиданное снижение экспрессии (log2FoldChange < -2.5) может отражать компенсаторный механизм, направленный на балансировку потока метаболитов или переключение на альтернативные пути (например, пентозофосфатный)
+PTS1 (YKR097W) – фосфотриозоизомераза, участвует в промежуточных этапах гликолиза. Снижение экспрессии (log2FoldChange < -2.5) может отражать компенсаторный механизм, направленный на балансировку потока метаболитов или переключение на альтернативные пути (например, пентозофосфатный)
 
 
 RGT2 (YOL136C) – мембранный сенсор глюкозы, активирующий экспрессию низкоаффинных транспортеров (например, HXT1) при высоких концентрациях сахара
