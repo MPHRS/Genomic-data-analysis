@@ -142,5 +142,5 @@ Lab notebook: https://github.com/MPHRS/Genomic-data-analysis/blob/main/Project_6
 
 1. Anders, S., Huber, W. Differential expression analysis for sequence count data. _Genome Biol_ **11**, R106 (2010). https://doi.org/10.1186/gb-2010-11-10-r106
 2. Méndez-Lucas A, Hyroššová P, Novellasdemunt L, Viñals F, Perales JC. Mitochondrial phosphoenolpyruvate carboxykinase (PEPCK-M) is a pro-survival, endoplasmic reticulum (ER) stress response gene involved in tumor cell adaptation to nutrient availability. J Biol Chem. 2014 Aug 8;289(32):22090-102. doi: 10.1074/jbc.M114.566927. Epub 2014 Jun 27. PMID: 24973213; PMCID: PMC4139223.
-3. https://www.yeastgenome.org/
+3. Cherry JM, Hong EL, Amundsen C, Balakrishnan R, Binkley G, Chan ET, et al. Saccharomyces Genome Database: the genomics resource of budding yeast. Nucleic Acids Res. 2012 Jan;40(Database issue):D700–5. doi:10.1093/nar/gkr1029
 4. Norbeck J, Pahlman AK, Akhtar N, Blomberg A, Adler L. Purification and characterization of two isoenzymes of DL-glycerol-3-phosphatase from _Saccharomyces cerevisiae_: identification of the corresponding GPP1 and GPP2 genes and evidence for osmotic regulation of Gpp2p expression by the osmosensing mitogen-activated protein kinase signal transduction pathway. J Biol Chem. 1996 Jun 7;271(23):13875–13881. doi:10.1074/jbc.271.23.13875
