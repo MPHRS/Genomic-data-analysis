@@ -113,12 +113,12 @@ table 2. genes differential expression for carbohydrate metabolic process.
 
 | Gene                   | Function                                                                                 | log₂FC  | Regulation |
 | ---------------------- | ---------------------------------------------------------------------------------------- | ------- | ---------- |
-| **YBR105C**  <br>VID24 | Phosphoglucose isomerase (glycolysis & PPP)                                              | +4.92   | up         |
-| **YER062C**  <br>GPP2  | Hexokinase 2 (glucose → G6P; glucose‐repression via Mig1)                                | +7.90   | up         |
-| **YKR097W**  <br>PCK1  | Phosphotriose isomerase (glycolytic intermediate)                                        | –4.71   | down       |
-| **YOL136C**  <br>PFK27 | Membrane glucose sensor                                                                  | +5.71   | up         |
-| YDR536W STL1           | Glycerol proton symporter (osmosensing response; transiently induced upon osmotic shock) | +7.8760 | up         |
-| YHR094C HXT1           | Low-affinity glucose transporter (high-capacity uptake at elevated glucose levels)       | +7.8836 | up         |
+| **YBR105C**  <br>VID24 | GID Complex regulatory subunit                                                           | +4.92   | up         |
+| **YER062C**  <br>GPP2  | Involved in glycerol biosynthesis                                                        | +7.90   | up         |
+| **YKR097W**  <br>PCK1  | Key enzyme in gluconeogenesis                                                            | –4.71   | down       |
+| **YOL136C**  <br>PFK27 |  6-Phosphofructo-2-kinase; synthesizes F₂,6-BP to activate glycolysis                    | +5.71   | up         |
+| **YDR536W** STL1       | Glycerol proton symporter (osmosensing response; transiently induced upon osmotic shock) | +7.8760 | up         |
+| **YHR094C** HXT1           | Low-affinity glucose transporter (high-capacity uptake at elevated glucose levels)       | +7.8836 | up         |
 
 **Down-regulation of PCK1**  
 PCK1 encodes phosphoenolpyruvate carboxykinase, the rate-limiting enzyme of gluconeogenesis. When extracellular glucose becomes plentiful, the cell abandons glucose synthesis in favor of high-flux glycolysis. Glucose induces a hierarchical repression cascade that shuts down transcription of gluconeogenic genes, and simultaneously accelerates degradation of existing PCK1 mRNAs. Together, these mechanisms rapidly remove Pck1p and its transcript, preventing futile glucose production under fermentative conditions[2].
